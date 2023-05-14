@@ -54,6 +54,22 @@ function getLength(){
   console.log("Character Count:" + length);
 }
 
+function getCharTypes(){
+  var choice;
+
+  // Lowercase
+  if(lowercase === null){
+    choice = prompt("Allow Lowercase:\nY/N?");
+    if(choice === "Y" || choice === "y"){lowercase = true; console.log("Lowercase: " + lowercase);}
+    else if(choice === "N" || choice === "n") {lowercase = false; console.log("Lowercase: " + lowercase);}
+    else if(choice !== "Y" || choice !== "y" || choice !== "N" || choice !== "n"){
+    alert("Answer with a Y or N.")
+    getCharTypes();
+    }
+  else {return "Your Secure Password";}
+  }
+  
+}
 
 
 // Write password to the #password input
