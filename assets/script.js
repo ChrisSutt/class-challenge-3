@@ -69,9 +69,59 @@ function getCharTypes(){
   else {return "Your Secure Password";}
   }
   
+  // Uppercase
+  if(uppercase === null) {
+    choice = prompt("Allow Uppercase:\nY/N?");
+  
+    if(choice === "Y" || choice === "y"){uppercase = true; console.log("Uppercase: " + uppercase);}
+    else if(choice === "N" || choice === "n") {uppercase = false; console.log("Uppercase: " + uppercase);}
+    else if(choice !== "Y" || choice !== "y" || choice !== "N" || choice !== "n"){
+      alert("Answer with a Y or N.")
+      getCharTypes();
+    }
+    else {return "Your Secure Password";}
+  }
+
+  // Numeric
+  if(numeric === null) {
+    choice = prompt("Allow Numbers:\nY/N?");
+  
+    if(choice === "Y" || choice === "y"){numeric = true; console.log("Numeric: " + numeric);}
+    else if(choice === "N" || choice === "n") {numeric = false; console.log("Numeric: " + numeric);}
+    else if(choice !== "Y" || choice !== "y" || choice !== "N" || choice !== "n"){
+      alert("Answer with a Y or N.")
+      getCharTypes();
+    }
+    else {return "Your Secure Password";}
+  }
+
+  // Special Char
+  if(specialChar === null) {
+    choice = prompt("Allow Special Characters:\nY/N?");
+  
+    if(choice === "Y" || choice === "y"){specialChar = true; console.log("SpecialChar: " + specialChar);}
+    else if(choice === "N" || choice === "n") {specialChar = false; console.log("SpecialChar: " + specialChar);}
+    else if(choice !== "Y" || choice !== "y" || choice !== "N" || choice !== "n"){
+      alert("Answer with a Y or N.")
+      getCharTypes();
+    }
+    else {return "Your Secure Password";}
+  }
+
+  if(lowercase === false && uppercase === false && numeric === false && specialChar === false){
+    alert("Warning!\nPassword requires at least one character type selected.");
+    lowercase = null;
+    uppercase = null;
+    numeric = null;
+    specialChar = null;
+
+
+    console.clear(); // Clears console on browser
+    console.log("Character Count:" + length);
+    
+    getCharTypes();
+  }
 }
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
