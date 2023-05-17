@@ -5,6 +5,13 @@ Class-Challenge-3 **Password Generator**
 ## Description
 
 I've created a simple prompt based password generator
+https://chrissutt.github.io/class-challenge-3/
+
+## ScreenShot
+<img
+  src="assets\images\pwgen.png"
+  alt="Password Generator"
+  style="display: left; margin: 0 auto; max-width: 300px">
 
 ## Usage
 
